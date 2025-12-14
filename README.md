@@ -130,6 +130,7 @@ contract Alfred {
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
 ![Foundry](https://img.shields.io/badge/Foundry-1C1C1C?style=for-the-badge&logo=foundry&logoColor=white)
 ![Hardhat](https://img.shields.io/badge/Hardhat-FFF100?style=for-the-badge&logo=hardhat&logoColor=black)
+![Soldeer](https://img.shields.io/badge/Soldeer-7C3AED?style=for-the-badge&logoColor=white)
 
 ### Frameworks & Tools
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -141,7 +142,6 @@ contract Alfred {
 
 ### Security & Testing
 ![Medusa](https://img.shields.io/badge/Medusa-FF6B6B?style=for-the-badge&logoColor=white)
-![Soldeer](https://img.shields.io/badge/Soldeer-7C3AED?style=for-the-badge&logoColor=white)
 
 </div>
 
