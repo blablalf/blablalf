@@ -25,37 +25,8 @@ contract Alfred {
     /// @notice Core identity
     string public constant NAME = "Alfred";
     string public constant PSEUDO = "blablalf";
-    string public constant LOCATION = unicode"Switzerland 🇨🇭";
+    string public constant LOCATION = "Switzerland 🇨🇭";
 
-    /// @notice Professional roles
-    struct Role {
-        string position;
-        string company;
-        string focus;
-    }
-
-    /// @notice Areas of expertise
-    enum Passion {
-        DeFi,
-        SmartContracts,
-        YieldFarming,
-        Trading
-    }
-
-    /// @notice Current focus project
-    string public currentFocus;
-
-    /// @notice All passions mapped by index
-    mapping(uint256 => Passion) public passions;
-
-    /// @notice Professional roles
-    Role public primaryRole;
-    Role public founderRole;
-
-    /// @notice Emitted when focus changes
-    /// @param oldFocus The previous focus
-    /// @param newFocus The new focus
-    event FocusUpdated(string oldFocus, string newFocus);
 
     /// @notice Deploys Alfred to the blockchain
     constructor() {
@@ -78,6 +49,38 @@ contract Alfred {
         passions[2] = Passion.YieldFarming;
         passions[3] = Passion.Trading;
     }
+
+    // ═══════════════════ The Boring Stuff™ ═══════════════════
+
+    /// @notice Professional roles
+    struct Role {
+        string position;
+        string company;
+        string focus;
+    }
+    
+    /// @notice Areas of expertise
+    enum Passion {
+        DeFi,
+        SmartContracts,
+        YieldFarming,
+        Trading
+    }
+
+    /// @notice Current focus project
+    string public currentFocus;
+
+    /// @notice All passions mapped by index
+    mapping(uint256 => Passion) public passions;
+
+    /// @notice Professional roles
+    Role public primaryRole;
+    Role public founderRole;
+
+    /// @notice Emitted when focus changes
+    /// @param oldFocus The previous focus
+    /// @param newFocus The new focus
+    event FocusUpdated(string oldFocus, string newFocus);
 
     /// @notice Returns current focus area
     /// @return The current project being built
