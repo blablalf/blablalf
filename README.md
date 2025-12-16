@@ -16,19 +16,33 @@
 pragma solidity 0.8.31;
 
 /**
- * @title Alfred
- * @author blablalf
+ * @title blablalf
+ * @author Alfred
  * @notice Blockchain Engineer | DeFi Builder
  * @dev Currently building the future of tokenized funds
  */
 contract Alfred {
-    /// @notice Core identity
-    string public constant NAME = "Alfred";
-    string public constant PSEUDO = "blablalf";
-    string public constant LOCATION = "Switzerland 🇨🇭";
+    // ═══════════════════════════ Types ═══════════════════════════
 
+    struct Role {
+        string position;
+        string company;
+        string focus;
+    }
 
-    /// @notice Deploys Alfred to the blockchain
+    enum Passion {
+        DeFi,
+        SmartContracts,
+        YieldFarming,
+        Trading
+    }
+
+    // ═════════════════════ State Variables ═════════════════════
+
+    string public constant LOCATION = "Switzerland";
+
+    // ═══════════════════════ Constructor ═══════════════════════
+
     constructor() {
         primaryRole = Role({
             position: "Backend Engineer",
@@ -42,58 +56,18 @@ contract Alfred {
             focus: "EVM Tokenized Funds Protocol"
         });
 
-        currentFocus = "Building T3tris - EVM Tokenized Funds Protocol";
-
-        passions[0] = Passion.DeFi;
-        passions[1] = Passion.SmartContracts;
-        passions[2] = Passion.YieldFarming;
-        passions[3] = Passion.Trading;
+        passions = [
+            Passion.DeFi,
+            Passion.SmartContracts,
+            Passion.YieldFarming
+        ];
     }
 
     // ═══════════════════ The Boring Stuff™ ═══════════════════
 
-    /// @notice Professional roles
-    struct Role {
-        string position;
-        string company;
-        string focus;
-    }
-    
-    /// @notice Areas of expertise
-    enum Passion {
-        DeFi,
-        SmartContracts,
-        YieldFarming,
-        Trading
-    }
-
-    /// @notice Current focus project
-    string public currentFocus;
-
-    /// @notice All passions mapped by index
-    mapping(uint256 => Passion) public passions;
-
-    /// @notice Professional roles
     Role public primaryRole;
     Role public founderRole;
-
-    /// @notice Emitted when focus changes
-    /// @param oldFocus The previous focus
-    /// @param newFocus The new focus
-    event FocusUpdated(string oldFocus, string newFocus);
-
-    /// @notice Returns current focus area
-    /// @return The current project being built
-    function getCurrentFocus() external view returns (string memory) {
-        return currentFocus;
-    }
-
-    /// @notice Returns all professional roles
-    /// @return primary The main employment role
-    /// @return founder The startup founder role
-    function getRoles() external view returns (Role memory primary, Role memory founder) {
-        return (primaryRole, founderRole);
-    }
+    Passion[3] public passions;
 }
 ```
 
@@ -145,21 +119,6 @@ contract Alfred {
 
 </div>
 
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=blablalf&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=6366F1&text_color=C9D1D9" width="49%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=blablalf&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=6366F1&currStreakLabel=6366F1" width="49%" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=blablalf&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=C9D1D9" width="40%" />
-
-</div>
-
----
-
 ## 🌐 Connect With Me
 
 <div align="center">
@@ -176,9 +135,16 @@ contract Alfred {
 
 ### 💡 Currently Building the Future of DeFi
 
-<img src="https://komarev.com/ghpvc/?username=blablalf&color=6366F1&style=for-the-badge&label=Profile+Views" />
-
 </div>
 
 <!-- Activity Graph -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=blablalf&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=6366F1&line=6366F1&point=FFFFFF" width="100%"/>
+
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=blablalf&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=6366F1&text_color=C9D1D9" width="49%" />
+
+<img src="https://komarev.com/ghpvc/?username=blablalf&color=6366F1&style=for-the-badge&label=Profile+Views" />
+
+</div>
