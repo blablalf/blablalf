@@ -22,21 +22,6 @@ pragma solidity 0.8.31;
  * @dev Currently building the future of tokenized funds
  */
 contract Alfred {
-    // ═══════════════════════════ Types ═══════════════════════════
-
-    struct Role {
-        string position;
-        string company;
-        string focus;
-    }
-
-    enum Passion {
-        DeFi,
-        SmartContracts,
-        YieldFarming,
-        Trading
-    }
-
     // ═════════════════════ State Variables ═════════════════════
 
     string public constant LOCATION = "Switzerland";
@@ -64,6 +49,18 @@ contract Alfred {
     }
 
     // ═══════════════════ The Boring Stuff™ ═══════════════════
+    
+    struct Role {
+        string position;
+        string company;
+        string focus;
+    }
+
+    enum Passion {
+        DeFi,
+        SmartContracts,
+        YieldFarming
+    }
 
     Role public primaryRole;
     Role public founderRole;
