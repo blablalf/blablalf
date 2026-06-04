@@ -19,7 +19,6 @@ pragma solidity 0.8.31;
  * @title blablalf
  * @author Alfred
  * @notice Blockchain Engineer | DeFi Builder
- * @dev Currently building the future of tokenized funds
  */
 contract Alfred {
     // ═════════════════════ State Variables ═════════════════════
@@ -30,15 +29,7 @@ contract Alfred {
 
     constructor() {
         primaryRole = Role({
-            position: "Backend Engineer",
-            company: "RA2Tech",
             focus: "Building DeFi Protocols"
-        });
-
-        founderRole = Role({
-            position: "CTO & Co-Founder",
-            company: "T3tris",
-            focus: "EVM Tokenized Funds Protocol"
         });
 
         passions = [
@@ -51,8 +42,6 @@ contract Alfred {
     // ═══════════════════ The Boring Stuff™ ═══════════════════
     
     struct Role {
-        string position;
-        string company;
         string focus;
     }
 
@@ -63,21 +52,9 @@ contract Alfred {
     }
 
     Role public primaryRole;
-    Role public founderRole;
     Passion[3] public passions;
 }
 ```
-
-<div align="center">
-
-### 🏢 Where I Build
-
-| Role | Company | Focus |
-|:----:|:-------:|:-----:|
-| **Backend Engineer** | [RA2Tech](https://ra2tech.com) 🇨🇭 | Building DeFi Protocols |
-| **CTO & Co-Founder** | [T3tris](https://t3tris.io) 🇫🇷 | EVM Tokenized Funds |
-
-</div>
 
 ---
 
@@ -123,16 +100,6 @@ contract Alfred {
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alfred-gaillard)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/0xblablalf)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@alfred-gaillard.fr)
-
-</div>
-
----
-
-<div align="center">
-
-### 💡 Currently Building the Future of DeFi
-
-</div>
 
 <!-- Activity Graph -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=blablalf&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=6366F1&line=6366F1&point=FFFFFF" width="100%"/>
